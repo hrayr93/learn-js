@@ -22,18 +22,19 @@
 Проверить, чтобы все работало без ошибок в консоли */
 
 'use strict';
-let numberOfFilms  = +prompt("Сколько фильмов вы уже посмотрели?","");
- let personalMovieDB = {
-       count: numberOfFilms,
-     movies : {
-
-     },
-     actors: {},
-     genres: [],
-     privat: false
+let numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
- let lastViewMovie = prompt("Один из последних просмотренных фильмов?",""),
-     assessment = prompt("На сколько оцените его?","");
+let lastViewMovie = prompt("Один из последних просмотренных фильмов?", ""),
+    assessment = prompt("На сколько оцените его?", ""),
+    firstViewMovie = prompt("Один из последних просмотренных фильмов?", ""),
+    assessment_two = prompt("На сколько оцените его?", "");
 
-  personalMovieDB.movies[lastViewMovie] = assessment;
-  console.log(personalMovieDB);
+personalMovieDB.movies[lastViewMovie] = assessment;
+personalMovieDB.movies[firstViewMovie] = assessment_two;
+console.log(personalMovieDB);
